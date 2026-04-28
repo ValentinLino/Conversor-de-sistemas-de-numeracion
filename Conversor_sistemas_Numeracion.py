@@ -18,25 +18,25 @@ def get_user_input():
 def detect_numeral_system(input_string_var):
     #binary check
     if input_string_var.startswith("0b") or input_string_var.startswith("0B"):
-        input_string_var=input_string_var[2:]  # Remove the "0b" prefix
-        output_var=int(input_string_var, 2)  # Convert binary string to integer
+        input_string_var=input_string_var[2:]  
+        output_var=int(input_string_var, 2)  
         return output_var
     
     #octal check
     elif input_string_var.startswith("0o") or input_string_var.startswith("0O"):
-        input_string_var=input_string_var[2:]  # Remove the "0o" prefix
-        output_var=int(input_string_var, 8)  # Convert octal string to integer
+        input_string_var=input_string_var[2:]  
+        output_var=int(input_string_var, 8)  
         return output_var
     
     #hexadecimal check
     elif input_string_var.startswith("0x") or input_string_var.startswith("0X"):
-        input_string_var=input_string_var[2:]  # Remove the "0x" prefix
-        output_var=int(input_string_var, 16)  # Convert hexadecimal string to integer
+        input_string_var=input_string_var[2:]  
+        output_var=int(input_string_var, 16)  
         return output_var
     
     #decimal check
     elif input_string_var[0] != 0:
-        output_var=int(input_string_var)  # Convert decimal string to integer
+        output_var=int(input_string_var)  
         return output_var
 
 def convert_to_other_systems(output_var):
