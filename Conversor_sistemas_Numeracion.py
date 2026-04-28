@@ -13,6 +13,10 @@ def get_user_input():
     input_string_var=input_string_var.strip().upper()
     return input_string_var
 
+def convert_string_to_correct_type(input_string_var):
+        
+        return int(input_string_var)
+    
 #funcion para detectar el sistema de numeracion del numero ingresado por el usuario
 def detect_numeral_system(input_string_var):
     #binary check
@@ -31,9 +35,7 @@ def detect_numeral_system(input_string_var):
     elif all(c in '0123456789ABCDEF' for c in input_string_var):
         return print(f"hexadecimal:{type(input_string_var)}")
     #decimal check
-def convert_string_to_correct_type(input_string_var):
-        
-        return int(input_string_var)
+
         
 loop=0
 
