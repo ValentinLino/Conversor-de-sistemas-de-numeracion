@@ -37,18 +37,31 @@ def detect_numeral_system(input_string_var):
     #decimal check
     elif input_string_var[0] != 0:
         output_var=int(input_string_var)  # Convert decimal string to integer
-        return "decimal"
-        
-loop=0
+        return output_var
+
+def convert_to_other_systems(output_var):
+    binary_var=bin(output_var)
+    octal_var=oct(output_var)
+    hexadecimal_var=hex(output_var)
+    print(f"El número ingresado es del sistema de numeración: {type(output_var)}")
+    print(f"En binario: {binary_var}")
+    print(f"En octal: {octal_var}")
+    print(f"En hexadecimal: {hexadecimal_var}")        
+    
+loop=True
 
     
 
-while loop<5:
+while loop == True:
     print("Presione ESC en cualquier momento para salir...")
-    if msvcrt.getch().lower() == b'\x1b':  # ESC key
-        break
     get_user_input_var=get_user_input()
     numeral_system_var=detect_numeral_system(get_user_input_var)
-    #print(f"El número ingresado es del sistema de numeración: {numeral_system_var}")
-    loop+=1
+    convert_to_other_systems(numeral_system_var)
+    print("\npresione cualquier tecla para continuar...")
+    if msvcrt.getch().lower() == b'\x1b':  # ESC key
+        loop=False
+        break
+
+
+    
     
